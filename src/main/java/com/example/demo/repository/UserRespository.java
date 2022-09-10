@@ -13,7 +13,7 @@ public class UserRespository {
         if(usuario.getId() == null)
             System.out.println("SAVE - Recebendo o usuário na camada de respositório");
         else
-            System.out.println("SAVE - Recebendo o usuário na camada de respositório");
+            System.out.println("UPDATE - Recebendo o usuário na camada de respositório");
 
         System.out.println(usuario);
     }
