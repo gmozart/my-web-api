@@ -10,7 +10,7 @@ public class Usuario {
     private String password;
 
     public Usuario(){}
-
+    public Usuario(Integer id) {}
     public Usuario(String login, String paswword){
         this.login = login;
         this.password = paswword;
