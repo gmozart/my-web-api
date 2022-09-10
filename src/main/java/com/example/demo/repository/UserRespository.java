@@ -1,5 +1,7 @@
 package com.example.demo.repository;
 
+import com.example.demo.handler.BusinessException;
+import com.example.demo.handler.CampoObrigatorioException;
 import com.example.demo.model.Usuario;
 import org.springframework.stereotype.Repository;
 
@@ -10,6 +12,10 @@ import java.util.List;
 public class UserRespository {
 
     public void save(Usuario usuario){
+        if(usuario.getLogin() == null)
+            throw new CampoObrigatorioException("Login");
+        if(usuario.getPassword() == null)
+            throw new CampoObrigatorioException("Password");
         if(usuario.getId() == null)
             System.out.println("SAVE - Recebendo o usuário na camada de respositório");
         else

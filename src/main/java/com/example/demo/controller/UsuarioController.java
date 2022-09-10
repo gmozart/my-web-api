@@ -39,7 +39,7 @@ public class UsuarioController {
     }
 
     @PutMapping()
-    public  void puttUser(@RequestBody Usuario usuario){
+    public  void putUser(@RequestBody Usuario usuario){
         userRespository.save(usuario);
 
     }
